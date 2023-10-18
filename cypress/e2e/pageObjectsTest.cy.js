@@ -1,10 +1,9 @@
 /// <reference types="cypress" />
 
-// const loginPage = require('../support/pages/login.page')
-// const { dashboardPage } = require ('../support/pages/dashboard.page') 
+//const loginPage = require('../support/pages/login.page')
+//const dashboardPage = require('../fixtures/data.json')
 
-const {dashboardPage, loginPage} = require ('..support/pages')
-
+const {dashboardPage, loginPage} = require ('..support/pages/index.js')
 const data = require('../fixtures/data.json')
 
 describe('Access Admin Panel', () => {
