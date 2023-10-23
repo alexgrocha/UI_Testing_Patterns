@@ -5,6 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
     // return require('./cypress/support/pages')(on, config)
     },
-   baseUrl: 'http://lojaebac.ebaconline.art.br'
+   "baseUrl": 'http://lojaebac.ebaconline.art.br'
   },
 });
