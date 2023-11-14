@@ -9,6 +9,7 @@ Cypress.Commands.add('login', (user, pass) => {
     fd.append('testcookie',1)
 
     cy.request({
+        // de url para baseUrl
         url: '/wp-login.php',
         method: 'POST',
         body: fd
@@ -16,12 +17,12 @@ Cypress.Commands.add('login', (user, pass) => {
         //pegando a informação que esta no cookie posição 1
         resp.headers['set-cookie'].forEach(cookie =>{
             const firstPart = cookie.split(';')[0]
-            const divisor = firstPart.index0f('=')
+            const divisor = firstPart.indexOf('=')
             const key = firstPart.substring(0, divisor)
             const value = firstPart.substring(divisor+1)
             cy.setCookie(key, value)
         })
     })
 
-    cy.visit('/wp-admin')
+   cy.visit('/wp-admin')
 })

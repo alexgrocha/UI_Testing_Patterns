@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-class LoginPage {
+class loginPage {
     get #user() {return cy.get("#user_login")}
     get #pass() {return cy.get("#user_pass")}
     get #login() {return cy.get("#wp-submit")}
@@ -13,4 +13,5 @@ class LoginPage {
 }
 
 //exportando pagina para realizaro login
-module.exports = new LoginPage()
+//module.exports = new LoginPage()
+module.exports = new loginPage()
